@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Rating Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Hotel Rating Based on Review</h1>
+        <form id="ratingForm">
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+            
+            <label for="votes">Votes:</label>
+            <input type="number" id="votes" name="votes" required>
+            
+            <label for="average_cost">Average Cost for Two People:</label>
+            <input type="number" id="average_cost" name="average_cost" required>
+            
+            <label for="online_order">Online Order Available?</label>
+            <select id="online_order" name="online_order">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            
+            <label for="book_table">Table Booking Available?</label>
+            <select id="book_table" name="book_table">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            
+            <button type="submit">Predict Rating</button>
+        </form>
+        
+        <div id="result"></div>
+    </div>
+</body>
+</html>
